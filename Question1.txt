@@ -1,0 +1,3 @@
+val input = sc.textFile("path of the file")
+val adress = readLine("enter any part of address : ")
+val filter = input.filter(line=>line.contains(adress)).map(line=>line.split("\\^")).map(line=>line(0)).distinct().collect().foreach(println)
